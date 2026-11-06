@@ -595,8 +595,8 @@ $('clearAllDepts').addEventListener('click', ()=>document.querySelectorAll('.dep
 function getSelectedDepts(){ return Array.from(document.querySelectorAll('.deptCheck:checked')).map(c=>c.value); }
 
 const TYPE_LEGEND = 'ME = Medical Equipment | MF = Medical Furniture | MI = Medical Instrument | HP = Hospital Plant';
-const COND_LEGEND_1 = 'A = Good and in use | B = Functional needs repair | C = Not functional but repairable';
-const COND_LEGEND_2 = 'D = Not functional unrepairable | E = Not installed | F = Missing or stolen';
+const COND_LEGEND_1 = 'A = Good And In Use | B = Good But Not In Use | C = In Use But Needs Repair';
+const COND_LEGEND_2 = 'D = In Use But Needs Replacement (Old or Obsolete) | E = Out of Order But Repairable | F = Out Of Order And Should Be Replaced (Cant Be Repaired, No Spare, Old or Obsolete';
 
 /* Export: real .xlsx binary with proper cell styling (works on desktop AND mobile) */
 $('exportExcel').addEventListener('click', async ()=>{
